@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="en"><head><style>@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav .nav-wrapper .brand-logo {
+    position: relative;
+    margin-right: 1em;
+}
+
+nav .nav-wrapper {
+    padding: 0 1em;
+}
+
+.mt {
+    margin-top: 1em;
+}
+
+.page-title {
+    margin-top: 0;
+    padding: 0.2em 1em;
+    vertical-align: top;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+    margin-bottom: 0;
+    color: #ba68c8;
+}
+
+.header {
+    color: #ba68c8;
+    font-weight: 300;
+}
+
+.deleteIcon:hover {
+    cursor: pointer;
+    color: #7b1fa2;
+}
+
+.page-content {
+    border-left: 1px solid rgba(0, 0, 0, 0.14);
+    border-right: 1px solid rgba(0, 0, 0, 0.14);
+    padding: 0 10em;
+}
+
+/*Меняем основные цвета форм*/
+
+/* label focus color */
+.page-content .input-field input[type=text]:focus + label {
+    color: #ce93d8 !important;
+}
+
+/* label underline focus color */
+.page-content .input-field input[type=text]:focus {
+    border-bottom: 1px solid #ce93d8 !important;
+    box-shadow: 0 1px 0 0 #ce93d8 !important;
+}
+
+.page-content .input-field input[type=number]:focus + label {
+    color: #ce93d8 !important;
+}
+
+/* label underline focus color */
+.page-content .input-field input[type=number]:focus {
+    border-bottom: 1px solid #ce93d8 !important;
+    box-shadow: 0 1px 0 0 #ce93d8 !important;
+}
+
+.page-content .dropdown-content li>a, .dropdown-content li>span {
+    color: #ce93d8 !important;
+}
+
+
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb
+}
+
+</style><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><title>Auto Service</title></head><body><header><nav class="purple darken-2"><div class="nav-wrapper"><a class="brand-logo left" href="/"><i class="material-icons large">directions_car</i><span>Auto Service</span></a><ul class="left hide-on-med-and-down" id="nav-mobile"><li><a href="/templates/masters.html">Мастера</a></li><li><a href="/templates/services.html">Услуги</a></li><li><a href="/templates/cars.html">Автомобили</a></li><li><a href="/templates/works.html">Работы</a></li></ul><a class="right" href="/logout">Выйти</a></div></nav></header><h2 class="page-title">Мастера</h2><div class="container page-content"><section class="section"><h3 class="header">Добавление</h3><form name="add_master_form"><div class="input-field"><input class="validate" id="add_name" type="text" autocomplete="off" required><label for="add_name">Имя</label></div><button class="btn waves-effect waves-light purple darken-2" type="submit" name="action">Добавить<i class="material-icons right">send</i></button></form><section class="section"><h3 class="header">Изменение</h3><form name="edit_master_form"><div class="input-field"><select id="edit_master"></select><label>Мастер</label></div><div class="input-field"><input class="validate" id="edit_name" type="text" autocomplete="off" required><label for="edit_name">Имя</label></div><button class="btn waves-effect waves-light purple darken-2" type="submit" name="action">Сохранить<i class="material-icons right">send</i></button></form></section><section class="section"><h3 class="header">Таблица</h3><table id="content_table"></table></section></section></div><script src="../index.bundle.js"></script><script src="../masters.bundle.js"></script></body></html>
